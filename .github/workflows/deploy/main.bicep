@@ -1,4 +1,4 @@
-targetScope = 'subscription'
+targetScope = 'resourceGroup'
 param profiles_cdncloudresume_name string = 'cdncloudresume'
 param storageAccounts_cloudresumeoyvind_name string = 'cloudresumeoyvind'
 
