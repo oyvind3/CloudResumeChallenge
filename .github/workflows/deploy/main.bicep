@@ -175,10 +175,6 @@ resource profiles_cdncloudresume_name_finsrudcloud 'Microsoft.Cdn/profiles/endpo
 resource storageAccounts_cloudresumeoyvind_name_default 'Microsoft.Storage/storageAccounts/blobServices@2022-05-01' = {
   parent: storageAccounts_cloudresumeoyvind_name_resource
   name: 'default'
-  sku: {
-    name: 'Standard_LRS'
-    tier: 'Standard'
-  }
   properties: {
     changeFeed: {
       enabled: false
