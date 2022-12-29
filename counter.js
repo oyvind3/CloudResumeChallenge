@@ -8,7 +8,11 @@ fetch("https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISI
   })
   .then(data => {
       console.log(data);
-      displayData(data)
+      displayVisitor(data)
     })
   .catch((error) => console.error("FETCH ERROR:", error));
 
+function displayVisitor(data) {
+  const cocktail = data.visitor[0];
+  const cocktailDiv = document.getElementById("visitor");
+}  
