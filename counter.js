@@ -1,4 +1,4 @@
-fetch('https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISITOR')
+fetch("https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISITOR")
   .then((response) => {
     if (response.ok) {
       return response.json();
@@ -10,4 +10,5 @@ fetch('https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISI
       console.log(data);
       displayData(data)
     })
-  .catch((error) => console.error("fetch error:", error));
+  .catch((error) => console.error("FETCH ERROR:", error));
+
