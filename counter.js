@@ -7,12 +7,17 @@ fetch("https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISI
     }
   })
   .then(data => {
-      console.log(data);
-      displayVisitor(data)
+    data.forEach(visitor => {
+      const markup = `<li>${visitor.visitor}</li>`;
+
+      document.querySelector('ul').insertAdjacentHTML('beforeend', markup);
     })
+  })
+//      console.log(data);
+//      displayVisitor(data)
   .catch((error) => console.error("FETCH ERROR:", error));
 
-function displayVisitor(data) {
-  const visitor = data;
-  const visitorDiv = document.getElementById("visitor");
-}  
+//function displayVisitor(data) {
+//  const visitor = data;
+//  const visitorDiv = document.getElementById("visitor");
+//}  
