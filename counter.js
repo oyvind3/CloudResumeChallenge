@@ -13,6 +13,6 @@ fetch("https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISI
   .catch((error) => console.error("FETCH ERROR:", error));
 
 function displayVisitor(data) {
-  const cocktail = data.visitor[0];
-  const cocktailDiv = document.getElementById("visitor");
+  const visitor = data.visitor[0];
+  const visitorDiv = document.getElementById("visitor");
 }  

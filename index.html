@@ -41,7 +41,12 @@
     </ul>
     <div id="visitor"></div>
     <div id="overlay"></div>
-    <script src="counter.js"></script>
+    <script src="counter.js">
+        const visitorName = visitor.strVisitor;
+        const heading = document.createElement("h1");
+        heading.innerHTML = visitorName;
+        visitorDiv.appendChild(heading);
+    </script>
   </body>
 </ul>
 </html>
