@@ -11,7 +11,20 @@
     <ul>
     <div id="visitor"></div>
     <div id="overlay"></div>
-    <script src="counter.js"></script>
+    <script>
+      fetch("https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISITOR")
+        .then((response) => {
+          return response.json();
+     })
+        .then(data => {
+           data.forEach(user => {
+            const markup = `<li>${user.visitor}</li>`;
+
+            document.querySelector("visitor").insertAdjacentHTML('beforeend', markup);
+          });
+      })
+        .catch(error => console.log(error));
+    </script>
     <h4>Technologies:</h4>
     <li>Azure, Kubernetes, Linux(RHEL, Docker, GitHub Actions</li>
     <h5>Certifications:</h5>
