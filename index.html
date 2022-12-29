@@ -15,6 +15,7 @@
       function getAPI(){
       fetch('https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISITOR')
         .then((res) => { return res.json() })
+        .then (res) = JSON.parse(res)
         .then((data) => {
             let result = `<h2> Random User Info From Jsonplaceholder API</h2>`;
             data.forEach((visitor1) => {
