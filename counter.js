@@ -10,12 +10,12 @@ fetch("https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISI
     data.forEach(visitor => {
       const markup = `<li>${visitor.visitor}</li>`;
 
-      document.querySelector('ul').insertAdjacentHTML('beforeend', markup);
+      document.querySelector('div id="visitor"').insertAdjacentHTML('beforeend', markup);
     })
   })
+  .catch(error => console.log(error));
 //      console.log(data);
 //      displayVisitor(data)
-  .catch((error) => console.error("FETCH ERROR:", error));
 
 //function displayVisitor(data) {
 //  const visitor = data;
