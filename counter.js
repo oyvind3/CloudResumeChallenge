@@ -7,10 +7,10 @@ fetch("https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISI
     }
   })
   .then(data => {
-    data.forEach(visitor => {
-      const markup = `<li>${visitor.visitor}</li>`;
+    data.forEach(user => {
+      const markup = `<li>${user.visitor}</li>`;
 
-      document.querySelector('div id="visitor"').insertAdjacentHTML('beforeend', markup);
+      document.querySelector("visitor").insertAdjacentHTML('beforeend', markup);
     })
   })
   .catch(error => console.log(error));
