@@ -8,22 +8,21 @@
 <h1>Resume finsrud.cloud</h1>
 <hr>      </hr>
   <body>
-    <button id="getData">GET DATA FROM API </button>
+    <button id="getAPI">GET DATA FROM API </button>
           <p id="result"></p>
     <script>
       document.getElementById('getAPI').addEventListener('click', getAPI);
       function getAPI(){
-      fetch("https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISITOR")
+      fetch('https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISITOR')
         .then((res) => { return res.json() })
         .then((data) => {
             let result = `<h2> Random User Info From Jsonplaceholder API</h2>`;
-            data.forEach((visitor) => {
-                const { id, visitor} = visitor
+            data.forEach((visitor1) => {
+                const {visitor} = visitor1
                 result +=
                     `<div>
                      <h5> User ID: ${visitor} </h5>
                          <ul class="w3-ul">
-                             <li> User Full Name changed to ID : ${id}</li>
                              <li> User Email : ${visitor} </li>
                          </ul>
                       </div>`;
