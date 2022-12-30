@@ -8,6 +8,10 @@ br {
 
   }
 
+hr {
+  color: blueviolet;
+}
+
 h4 {
   color: rgb(56, 53, 59);
 
@@ -17,5 +21,8 @@ h5 {
 
 }
 body {
-  background-color: rgb(120, 133, 138);
+  background-color: rgba(23, 148, 198, 0.445);
+}
+h5{
+  color: rgb(0, 0, 0);
 }
