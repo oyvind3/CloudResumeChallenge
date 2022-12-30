@@ -1,29 +1,11 @@
-const ul = document.getElementById('visitors');
-const list = document.createDocumentFragment();
-fetch('https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISITOR')
-      .then(response => response.json())
-      .then(response => console.log(JSON.stringify(response)))
-      .then(json => console.log(json))
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        let visitors = data;
+const api_url = 'https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISITOR'
+async function getISS() {
+  const response = await fetch(api_url);
+  const data = await response.json();
+  console.log(data);
+  console.log(data.visitor);
+  const {visitor} = data
+  document.getElementById('visit').textContent = visitor;
+}
+getISS();
 
-        visitors.map(function(visitor1) {
-          let li =document.createElement('li');
-          let visitor = document.createElement('h2');
-          let testpartitionkey = document.createElement('span');
-
-          visitor.innerHTML = `${visitor1.visitor}`;
-          testpartitionkey.innerHTML = `${visitor1.testpartitionkey}`;
-
-          li.appendChild(visitor);
-          li.appendChild(testpartitionkey);
-          list.appendChild(li);
-          ul.appendChild(list);
-        });
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
