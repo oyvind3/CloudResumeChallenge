@@ -8,30 +8,7 @@
 <h1>Resume finsrud.cloud</h1>
 <hr>      </hr>
   <body>
-    <button id="getAPI">GET DATA FROM API </button>
-          <p id="result"></p>
-    <script>
-      document.getElementById('getAPI').addEventListener('click', getAPI);
-      function getAPI(){
-      fetch('https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISITOR')
-        .then((res) => { return res.json() })
-        .then (res) = JSON.parse(res)
-        .then((data) => {
-            let result = `<h2> Random User Info From Jsonplaceholder API</h2>`;
-            data.forEach((visitor1) => {
-                const {visitor} = visitor1
-                result +=
-                    `<div>
-                     <h5> User ID: ${visitor} </h5>
-                         <ul class="w3-ul">
-                             <li> User Email : ${visitor} </li>
-                         </ul>
-                      </div>`;
-                        document.getElementById('result').innerHTML = result;
-                    });
-                })
-      }
-    </script> 
+    <script src="counter.js"></script>
     <ul>
     <h4>Technologies:</h4>
     <li>Azure, Kubernetes, Linux(RHEL, Docker, GitHub Actions</li>
@@ -63,11 +40,10 @@
           </ul>
         </li>
     </ul>
-    <div class="visitor">
-      <ul> </ul>
-      <h2>test visitor</h2>
-      <p>London is the capital of England.</p>
     </div>
+    <script> let d = new Date();
+             document.body.innerHTML = "<h2> Dagens dato er " + d +"</h2>"
+    </script>
   </body>
 </ul>
 </html>
