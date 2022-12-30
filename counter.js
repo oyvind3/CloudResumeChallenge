@@ -2,8 +2,8 @@ const ul = document.getElementById('visitors');
 const list = document.createDocumentFragment();
 fetch('https://inportalediting.azurewebsites.net/api/visit/testpartitionkey/VISITOR')
       .then(response => response.json())
+      .then(response => console.log(JSON.stringify(response)))
       .then(json => console.log(json))
-      var obj = JSON.parse(response)
       .then((response) => {
         return response.json();
       })
